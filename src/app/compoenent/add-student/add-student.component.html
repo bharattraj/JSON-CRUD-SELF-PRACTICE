@@ -1,0 +1,50 @@
+<form [formGroup]="formG" (ngSubmit)="addStudentInfo()">
+    <div class="student-name">
+        <label>Student Name</label>
+        <input type="text" formControlName="studentName" placeholder="Enter Student Name">
+        <div
+            *ngIf="formG.get('studentName')?.['invalid'] && (formG.get('studentName')?.['dirty'] || formG.get('studentName')?.['touched'])">
+            <small *ngIf="formG.get('studentName')?.errors?.['required']">Username is required!</small>
+        </div>
+    </div>
+    <div class="password">
+        <label>Password</label>
+        <input type="text" formControlName="password" placeholder="Enter Password">
+        <div
+            *ngIf="formG.get('password')?.['invalid'] && (formG.get('password')?.['dirty'] || formG.get('password')?.['touched'])">
+            <small *ngIf="formG.get('password')?.errors?.['required']">Password is required!</small>
+            <small *ngIf="formG.get('password')?.errors?.['pattern']">Password must contains a-z, A-Z, 0-9 and special characters(!,@,#,$,%,^,&,*)</small>
+        </div>
+    </div>
+    <div class="mobile">
+        <label>Mobile</label>
+        <input type="text" formControlName="mobile" placeholder="Enter Mobile Number">
+        <div
+            *ngIf="formG.get('mobile')?.['invalid'] && (formG.get('mobile')?.['dirty'] || formG.get('mobile')?.['touched'])">
+            <small *ngIf="formG.get('mobile')?.errors?.['required']">Mobile No. is required!</small>
+            <small *ngIf="formG.get('mobile')?.errors?.['pattern']">Mobile should have 10 digits!</small>
+        </div>
+
+    </div>
+    <div class="email">
+        <label>Email</label>
+        <input type="text" formControlName="email" placeholder="Enter Email Id!">
+        <div
+            *ngIf="formG.get('email')?.['invalid'] && (formG.get('email')?.['dirty'] || formG.get('email')?.['touched'])">
+            <small *ngIf="formG.get('email')?.errors?.['required']">Email ID is required!</small>
+            <small *ngIf="formG.get('email')?.errors?.['pattern']">Enter Correct email id</small>
+        </div>
+    </div>
+    <div class="dob">
+        <label>Date Of Birth</label>
+        <input type="text" formControlName="dateOfBirth" placeholder="Enter Date of Birth">
+        <div
+            *ngIf="formG.get('dateOfBirth')?.['invalid'] && (formG.get('dateOfBirth')?.['dirty'] || formG.get('dateOfBirth')?.['touched'])">
+            <small *ngIf="formG.get('dateOfBirth')?.errors?.['required']">DOB is required!</small>
+            <small *ngIf="formG.get('dateOfBirth')?.errors?.['pattern']">Please enter DOB in YYYY-MM-DD format!</small>
+        </div>
+    </div>
+    <div class="submit">
+        <input type="submit">
+    </div>
+</form>

@@ -1,0 +1,30 @@
+<div *ngIf="st; else noStudentFound" class="container mt-4">
+    <h2>Student Details</h2>
+    <table class="table table-striped table-hover">
+      <tbody>
+        <tr>
+          <th scope="row">Student Name</th>
+          <td>{{ st.studentName }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Email Id</th>
+          <td>{{ st.email }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Mobile No.</th>
+          <td>{{ st.mobile }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Date Of Birth</th>
+          <td>{{ st.dateOfBirth }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noStudentFound>
+    <div class="alert alert-warning mt-4">
+      No student data found or still loading...
+    </div>
+  </ng-template>
+  

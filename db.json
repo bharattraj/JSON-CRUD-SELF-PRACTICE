@@ -1,0 +1,20 @@
+{
+  "students": [
+    {
+      "id": "7e23",
+      "studentName": "abhya",
+      "password": "abhya@A786",
+      "mobile": "9898989898",
+      "email": "abhya@gandu.com",
+      "dateOfBirth": "0000-00-00"
+    },
+    {
+      "id": "e706",
+      "studentName": "Viswajith",
+      "password": "Vishwa@786",
+      "mobile": "9420420420",
+      "email": "Vishwa@gmail.com",
+      "dateOfBirth": "0000-00-00"
+    }
+  ]
+}
